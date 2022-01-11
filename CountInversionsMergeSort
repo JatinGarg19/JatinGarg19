@@ -1,0 +1,77 @@
+// Count Inversions using mergeSort
+
+#include<iostream>
+using namespace std;
+
+long long merge(int* arr, int s, int mid, int e) {
+    long long invCount = 0;
+    // int mid = s + (e - s)/2;
+    int len1 = mid-s+1;
+    int len2 = e-mid;
+    
+    int* left = new int[len1];
+    int* right = new int[len2];
+    
+    int k = s;
+    for (int i = 0; i < len1; i++) {
+        left[i] = arr[k++]; 
+    }
+     k = mid+1;
+    for (int i = 0; i < len2 ; i++) {
+        right[i] = arr[k++];
+    }
+    //merge 
+    int p=s;
+    int i=0, j=0;
+    
+    while(i<len1 and j<len2) {
+        if(left[i] <= right[j]) {
+            arr[p++] = left[i++];
+        }
+        else {                    // left[i]>right[j] and i<j , then inversions will be counted 
+            arr[p] = right[j];
+            invCount += len1 - i;
+            p++; j++;
+        }
+    }
+    while(i<len1) {
+        arr[p++] = left[i++];
+    }
+    while(j<len2) {
+        arr[p++] = right[j++];
+    }
+    return invCount;
+}
+
+long long mergeSort(int* arr, int s, int e) {
+    
+    long long invCount = 0;
+    if(s < e) {
+        int mid = s + (e - s)/2;
+    //Sort left part
+        invCount += mergeSort(arr, s, mid);
+    // sort right part
+        invCount += mergeSort(arr, mid+1, e);
+    // merge two sorted arrays
+        invCount += merge(arr, s, mid, e);
+    }
+    return invCount;
+}
+
+int main()
+{
+    int arr[4] = {8, 4, 2, 1};
+    int n = 4;
+    cout << "Given array is: ";
+    for (int i = 0; i < 4; i++) {
+        cout << arr[i] << " ";
+    } cout << endl;
+    
+    cout << endl;
+    cout << "Total inversions are: ";
+    cout << mergeSort(arr, 0, n-1) << endl;;
+   
+   
+    
+    return 0;
+}
