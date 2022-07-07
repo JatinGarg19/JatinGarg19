@@ -4,7 +4,8 @@
 - 💞️ I’m looking to collaborate on any project that is related to coding and gain new skills.
 - 📫 How to reach me :
 Email - gargjatin272@gmail.com
-Instagram - @jatin._gargg
+Instagram - @jatin_g19
+Contact - +91 6239696495
 
 <!---
 JatinGarg19/JatinGarg19 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
