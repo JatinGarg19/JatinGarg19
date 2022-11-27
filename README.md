@@ -1,11 +1,8 @@
 - 👋 Hi, I’m @JatinGarg19
-- 👀 I’m interested in Software Development and Web Development
-- 🌱 I’m currently pursuing BTech. in Computer Science from Guru Nanak Dev University , Amritsar.
-- 💞️ I’m looking to collaborate on any project that is related to coding and gain new skills.
+- 🌱 I’m currently pursuing BTech. from Guru Nanak Dev University, Amritsar in Computer Science.
+- 👀 I’m interested in Software Development, Web Development and Data Science.
 - 📫 How to reach me :
 Email - gargjatin272@gmail.com
-Instagram - @jatin_g19
-Contact - +91 6239696495
 
 <!---
 JatinGarg19/JatinGarg19 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
